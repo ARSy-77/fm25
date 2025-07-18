@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gebyar Olahraga Kemerdekaan Ke-80</title>
     <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="icon" type="image/png" href="image/Logo.png">
 </head>
-<body>
 
+<body>
     <!-- Header dan Navigasi -->
     <header>
         <div class="container">
-            <div id="logo">FAKTA MERDEKA</div>
             <nav>
-                <ul>
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="#cabor">Lomba</a></li>
-                    <li><a href="#jadwal">Jadwal</a></li>
-                    <li><a href="#pendaftaran">Daftar</a></li>
-                </ul>
+                <div class="logo">
+                    <img src="image/Logo.png" alt="Logo FAKTA MERDEKA">
+                </div>
+                <div id="logo">FAKTA MERDEKA</div>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#cabor">Lomba</a></li>
+                        <li><a href="#jadwal">Jadwal</a></li>
+                        <li><a href="#pendaftaran">Daftar</a></li>
+                    </ul>
+                </div>
             </nav>
         </div>
     </header>
@@ -26,6 +33,10 @@
     <main>
         <!-- Bagian Hero -->
         <section id="hero" class="hero">
+            <video class="hero-bg-video" autoplay muted loop playsinline>
+                <source src="video/Atas Berkat Rochmat Alloh Yang Maha KuasaFAKTA MERDEKA “NGERUWAT INDONESIA”Sebagai wujud rasa sy.mp4" type="video/mp4">
+                Browser Anda tidak mendukung video.
+            </video>
             <h1>FAKTA MERDEKA</h1>
             <p>Rayakan 80 Tahun Kemerdekaan Indonesia dengan Semangat Sportivitas!</p>
             <a href="#pendaftaran" class="btn">Daftar Sekarang!</a>
@@ -54,7 +65,7 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- Bagian Jadwal -->
         <section id="jadwal">
             <div class="container">
@@ -84,7 +95,7 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- Bagian Pendaftaran -->
         <section id="pendaftaran" class="pendaftaran-cta">
             <div class="container">
@@ -93,7 +104,6 @@
                 <a href="#" class="btn" style="background: var(--putih); color: var(--merah);">Formulir Pendaftaran</a>
             </div>
         </section>
-
     </main>
 
     <!-- Footer -->
@@ -102,6 +112,6 @@
             <p>&copy; 2025 Panitia Gebyar Olahraga Kemerdekaan. Dirgahayu Indonesia!</p>
         </div>
     </footer>
-
 </body>
+
 </html>
