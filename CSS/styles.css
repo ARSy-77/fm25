@@ -553,3 +553,26 @@
             padding: 2 rem 0;
         }
     }
+
+    /* Bagian Media Sosial */
+    .social-media {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        list-style: none;
+    }
+    .social-media img {
+        width: 40px;
+        height: 40px;
+        background: #fff;
+        border-radius: 25%;
+        padding: 6px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        border: 0.5px solid #eee;
+        object-fit: contain;
+        transition: box-shadow 0.2s;
+    }
+    .social-media img:hover {
+        box-shadow: 0 4px 16px rgba(230,0,0,0.18);
+        border-color: var(--emas);
+    }
