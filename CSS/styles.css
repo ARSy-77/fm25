@@ -408,11 +408,14 @@
         padding: 1.5rem 2rem;
         min-width: 220px;
         max-width: 260px;
-        min-height: 0px;         /* Tambahkan tinggi minimum agar konten bisa benar-benar di tengah */
+        min-height: 180px;         /* Pastikan tinggi minimum agar konten bisa benar-benar di tengah */
         text-align: center;
         transition: transform 0.2s, box-shadow 0.2s;
         position: relative;
         overflow: hidden;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
     .sejarah-card:hover {
         transform: translateY(-8px) scale(1.04);
@@ -431,20 +434,10 @@
         color: #fff;
         text-shadow: 0 2px 8px rgba(0,0,0,0.4);
     }
-    .sejarah-2022,
-    .sejarah-2023,
-    .sejarah-2024,
-    .sejarah-2025 {
-        background-size: cover;
-        background-position: center;
-        color: #fff;
-        height: 120px;
-        text-align: center;
-    }
-    .sejarah-2022 { background-image: url('../image/sejarah-2022.jpg'); }
-    .sejarah-2023 { background-image: url('../image/sejarah-2023.jpg'); }
-    .sejarah-2024 { background-image: url('../image/sejarah-2024.jpg'); }
-    .sejarah-2025 { background-image: url('../image/sejarah-2025.jpg'); }
+    .sejarah-2022 { background-image: url('../image/sejarah-2022.jpg'); color: #fff; }
+    .sejarah-2023 { background-image: url('../image/sejarah-2023.jpg'); color: #fff; }
+    .sejarah-2024 { background-image: url('../image/sejarah-2024.jpg'); color: #fff; }
+    .sejarah-2025 { background-image: url('../image/sejarah-2025.jpg'); color: #fff; }
 
     .sejarah-2022::before,
     .sejarah-2023::before,
@@ -519,6 +512,7 @@
         .sejarah-card {
             width: 100%;
             max-width: 350px;
+            min-height: 140px;
         }
     }
 
