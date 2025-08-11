@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gebyar Olahraga Kemerdekaan Ke-80</title>
     <link rel="stylesheet" href="CSS/styles.css">
-    <link rel="icon" type="image/png" href="image/Logo.png">
+    <link rel="icon" type="image/png" href="image/Logo FM 25.png">
 </head>
 
 <body>
@@ -15,7 +15,7 @@
         <div class="container">
             <nav>
                 <div class="logo">
-                    <img src="image/Logo.png" alt="Logo FAKTA MERDEKA">
+                    <a href="#"><img src="image/Logo FM 25.png" alt="Logo FAKTA MERDEKA"></a>
                 </div>
                 <div id="logo">FAKTA MERDEKA</div>
                 <button class="nav-toggle" aria-label="Toggle navigation">
@@ -39,7 +39,10 @@
         <!-- Bagian Hero -->
         <section id="hero" class="hero">
             <video class="hero-bg-video" autoplay muted loop playsinline>
-                <source src="video/Atas Berkat Rochmat Alloh Yang Maha KuasaFAKTA MERDEKA “NGERUWAT INDONESIA”Sebagai wujud rasa sy.mp4" type="video/mp4">
+                <!-- Video portrait untuk HP -->
+                <source src="video/FM 25.mp4" type="video/mp4" media="(max-width: 600px) and (orientation: portrait)">
+                <!-- Video landscape untuk desktop/laptop -->
+                <source src="video/FM 24.mp4" type="video/mp4" media="(min-width: 601px), (orientation: landscape)">
                 Browser Anda tidak mendukung video.
             </video>
             <h1>FAKTA MERDEKA</h1>
@@ -51,23 +54,27 @@
         <section id="tentang">
             <div class="container">
                 <h2 class="section-title">Sejarah Gebyar Olahraga Kemerdekaan</h2>
-                <p>
+                <p class="deskripsi-judul">
                     Gebyar Olahraga Kemerdekaan telah menjadi tradisi tahunan sejak 2022, mempererat tali persaudaraan dan menumbuhkan semangat sportivitas di masyarakat.
                     Selama tiga tahun berturut-turut, acara ini sukses menghadirkan keceriaan, kompetisi sehat, dan berbagai inovasi lomba tradisional.
                     Tahun ini, pada 25-27 Agustus 2025, kita akan menggelar edisi ke-4 dengan lebih banyak cabang olahraga, hadiah menarik, dan partisipasi yang lebih luas!
                 </p>
                 <div class="sejarah-grid">
-                    <div class="sejarah-card">
+                    <div class="sejarah-card sejarah-2022">
                         <div class="sejarah-tahun">2022</div>
-                        <div class="sejarah-deskripsi">Edisi perdana, diikuti 10 RT, sukses membangun kebersamaan.</div>
+                        <div class="sejarah-deskripsi">Fakta Merdeka Ke-1</div>
                     </div>
-                    <div class="sejarah-card">
+                    <div class="sejarah-card sejarah-2023">
                         <div class="sejarah-tahun">2023</div>
-                        <div class="sejarah-deskripsi">Penambahan lomba baru dan peserta meningkat 2x lipat.</div>
+                        <div class="sejarah-deskripsi">Fakta Merdeka Ke-2</div>
                     </div>
-                    <div class="sejarah-card">
+                    <div class="sejarah-card sejarah-2024">
                         <div class="sejarah-tahun">2024</div>
-                        <div class="sejarah-deskripsi">Kolaborasi dengan UMKM lokal dan hiburan rakyat.</div>
+                        <div class="sejarah-deskripsi">Fakta Merdeka Ke-3</div>
+                    </div>
+                    <div class="sejarah-card sejarah-2025">
+                        <div class="sejarah-tahun">2025</div>
+                        <div class="sejarah-deskripsi">Fakta Merdeka Ke-4</div>
                     </div>
                 </div>
             </div>

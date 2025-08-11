@@ -159,7 +159,7 @@
             position: fixed;
             top: 0;
             right: -100vw;
-            width: 70vw;
+            width: 30vw;
             max-width: 320px;
             height: 100vh;
             background: var(--merah);
@@ -173,6 +173,7 @@
         }
         .nav-links.open {
             right: 0;
+
         }
         .nav-links ul {
             flex-direction: column;
@@ -207,7 +208,7 @@
         position: relative;
         overflow: hidden;
         background: linear-gradient(rgba(230, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url('https://placehold.co/1500x800/000000/FFFFFF?text=Bazar, Lomba, dan Penampilan') no-repeat center center/cover;
-        height: 90vh;
+        height: 100vh;
         color: var(--putih);
         display: flex;
         flex-direction: column;
@@ -268,7 +269,7 @@
     /* Judul Section */
     .section-title {
         text-align: center;
-        padding-top: 5rem;
+        padding-top: 1rem;
         padding-bottom: 1.5rem;
         font-family: 'Bebas Neue', sans-serif;
         font-size: 3.5rem;
@@ -378,6 +379,15 @@
         margin: 0 0 1rem 0;
     }
 
+    /* Deskripsi Sejarah */
+    .deskripsi-judul {
+        font-size: 1.2rem;
+        margin: 1rem 0;
+        line-height: 1.6;
+        text-align: justify;
+        text-indent: 50px;
+    }
+
     /* Bagian Sejarah */
     .sejarah-grid {
         display: flex;
@@ -387,6 +397,10 @@
         flex-wrap: wrap;
     }
     .sejarah-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;   /* Vertikal tengah */
+        align-items: center;       /* Horizontal tengah */
         background: var(--putih);
         border: 2px solid var(--emas);
         border-radius: 12px;
@@ -394,8 +408,11 @@
         padding: 1.5rem 2rem;
         min-width: 220px;
         max-width: 260px;
+        min-height: 0px;         /* Tambahkan tinggi minimum agar konten bisa benar-benar di tengah */
         text-align: center;
         transition: transform 0.2s, box-shadow 0.2s;
+        position: relative;
+        overflow: hidden;
     }
     .sejarah-card:hover {
         transform: translateY(-8px) scale(1.04);
@@ -404,14 +421,44 @@
     }
     .sejarah-tahun {
         font-family: 'Bebas Neue', sans-serif;
-        font-size: 2.2rem;
-        color: var(--merah);
+        font-size: 4rem;
+        color: var(--emas);
         margin-bottom: 0.5rem;
         letter-spacing: 1px;
     }
     .sejarah-deskripsi {
         font-size: 1.05rem;
-        color: var(--hitam);
+        color: #fff;
+        text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    }
+    .sejarah-2022,
+    .sejarah-2023,
+    .sejarah-2024,
+    .sejarah-2025 {
+        background-size: cover;
+        background-position: center;
+        color: #fff;
+        height: 120px;
+        text-align: center;
+    }
+    .sejarah-2022 { background-image: url('../image/sejarah-2022.jpg'); }
+    .sejarah-2023 { background-image: url('../image/sejarah-2023.jpg'); }
+    .sejarah-2024 { background-image: url('../image/sejarah-2024.jpg'); }
+    .sejarah-2025 { background-image: url('../image/sejarah-2025.jpg'); }
+
+    .sejarah-2022::before,
+    .sejarah-2023::before,
+    .sejarah-2024::before,
+    .sejarah-2025::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,0.45); /* overlay gelap agar teks tetap terbaca */
+        z-index: 0;
+    }
+    .sejarah-card > * {
+        position: relative;
+        z-index: 1;
     }
 
     /* Footer */
@@ -472,5 +519,43 @@
         .sejarah-card {
             width: 100%;
             max-width: 350px;
+        }
+    }
+
+    /* Bagian Sponsor */
+    #sponsor {
+        background: var(--putih);
+        padding: 0.1rem 0;
+    }
+
+    #sponsor h2 {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 3rem;
+        color: var(--merah);
+        margin-bottom: rem;
+    }
+
+    #sponsor .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem; /* Jarak antar elemen */
+        padding-top: 0px;
+        padding-bottom: 2.5rem;
+    }
+
+    #sponsor .btn {
+        margin-top: 1 rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        #sponsor h2 {
+            font-size: 2.5rem;
+        }
+
+        #sponsor .container {
+            padding: 2 rem 0;
         }
     }
