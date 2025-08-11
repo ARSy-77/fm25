@@ -18,6 +18,11 @@
                     <img src="image/Logo.png" alt="Logo FAKTA MERDEKA">
                 </div>
                 <div id="logo">FAKTA MERDEKA</div>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
                 <div class="nav-links">
                     <ul>
                         <li><a href="#hero">Home</a></li>
@@ -40,6 +45,32 @@
             <h1>FAKTA MERDEKA</h1>
             <p>Rayakan 80 Tahun Kemerdekaan Indonesia dengan Semangat Sportivitas!</p>
             <a href="#pendaftaran" class="btn">Daftar Sekarang!</a>
+        </section>
+
+        <!-- Bagian Tentang -->
+        <section id="tentang">
+            <div class="container">
+                <h2 class="section-title">Sejarah Gebyar Olahraga Kemerdekaan</h2>
+                <p>
+                    Gebyar Olahraga Kemerdekaan telah menjadi tradisi tahunan sejak 2022, mempererat tali persaudaraan dan menumbuhkan semangat sportivitas di masyarakat.
+                    Selama tiga tahun berturut-turut, acara ini sukses menghadirkan keceriaan, kompetisi sehat, dan berbagai inovasi lomba tradisional.
+                    Tahun ini, pada 25-27 Agustus 2025, kita akan menggelar edisi ke-4 dengan lebih banyak cabang olahraga, hadiah menarik, dan partisipasi yang lebih luas!
+                </p>
+                <div class="sejarah-grid">
+                    <div class="sejarah-card">
+                        <div class="sejarah-tahun">2022</div>
+                        <div class="sejarah-deskripsi">Edisi perdana, diikuti 10 RT, sukses membangun kebersamaan.</div>
+                    </div>
+                    <div class="sejarah-card">
+                        <div class="sejarah-tahun">2023</div>
+                        <div class="sejarah-deskripsi">Penambahan lomba baru dan peserta meningkat 2x lipat.</div>
+                    </div>
+                    <div class="sejarah-card">
+                        <div class="sejarah-tahun">2024</div>
+                        <div class="sejarah-deskripsi">Kolaborasi dengan UMKM lokal dan hiburan rakyat.</div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Bagian Cabang Olahraga -->
@@ -104,6 +135,20 @@
                 <a href="#" class="btn" style="background: var(--putih); color: var(--merah);">Formulir Pendaftaran</a>
             </div>
         </section>
+
+        <!-- Bagian Ajakan Sponsor -->
+        <section id="sponsor" style="background: #fffbe6; border-top: 3px solid var(--emas); border-bottom: 3px solid var(--emas);">
+            <div class="container">
+                <h2 class="section-title">Dukungan & Sponsorship</h2>
+                <p>
+                    Jadilah bagian dari kemeriahan Gebyar Olahraga Kemerdekaan ke-4! 
+                    Dukung acara ini sebagai sponsor dan dapatkan eksposur brand Anda di hadapan ribuan peserta dan pengunjung. 
+                    Bersama kita wujudkan semangat kemerdekaan dan kebersamaan!
+                </p>
+                <a href="mailto:panitia@faktamerdeka.com" class="btn">Hubungi Kami untuk Sponsorship</a>
+            </div>
+        </section>
+
     </main>
 
     <!-- Footer -->
@@ -112,6 +157,30 @@
             <p>&copy; 2025 Panitia Gebyar Olahraga Kemerdekaan. Dirgahayu Indonesia!</p>
         </div>
     </footer>
+    <div class="nav-overlay"></div>
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        const navOverlay = document.querySelector('.nav-overlay');
+
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+            navOverlay.classList.toggle('active');
+        });
+
+        navOverlay.addEventListener('click', () => {
+            navLinks.classList.remove('open');
+            navOverlay.classList.remove('active');
+        });
+
+        // Optional: close menu on link click (mobile)
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                navOverlay.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 
 </html>
