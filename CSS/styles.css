@@ -416,6 +416,7 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        text-decoration: none; /* Menghilangkan garis bawah pada link */
     }
     .sejarah-card:hover {
         transform: translateY(-8px) scale(1.04);
